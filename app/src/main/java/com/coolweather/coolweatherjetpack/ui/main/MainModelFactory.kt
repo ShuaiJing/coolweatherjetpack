@@ -1,4 +1,4 @@
-package com.coolweather.coolweatherjetpack.ui
+package com.coolweather.coolweatherjetpack.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/content_toolbar"></include>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="60dp"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="50dp">
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                      android:background="@color/text_color_ffa3a3a3"
+                ></View>
+                <Button android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/primary_button_background_selector"
+                        android:layout_marginTop="5dp"
+                        android:text="结算"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="40dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

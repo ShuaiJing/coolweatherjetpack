@@ -16,7 +16,8 @@ import com.bumptech.glide.Glide
 import com.coolweather.coolweatherjetpack.R
 import com.coolweather.coolweatherjetpack.data.Resource
 import com.coolweather.coolweatherjetpack.data.model.weather.Weather
-import com.coolweather.coolweatherjetpack.ui.MainActivity
+import com.coolweather.coolweatherjetpack.ui.BaseActivity
+import com.coolweather.coolweatherjetpack.ui.main.MainActivity
 import com.coolweather.coolweatherjetpack.util.InjectorUtil
 import kotlinx.android.synthetic.main.activity_weather.*
 import kotlinx.android.synthetic.main.aqi.*
@@ -25,7 +26,7 @@ import kotlinx.android.synthetic.main.now.*
 import kotlinx.android.synthetic.main.suggestion.*
 import kotlinx.android.synthetic.main.title.*
 
-class WeatherActivity : AppCompatActivity() {
+class WeatherActivity : BaseActivity() {
 
     lateinit var viewModel: WeatherViewModel
 

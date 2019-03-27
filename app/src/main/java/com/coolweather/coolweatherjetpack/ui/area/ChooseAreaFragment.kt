@@ -13,13 +13,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.coolweather.coolweatherjetpack.R
 import com.coolweather.coolweatherjetpack.data.Resource
-import com.coolweather.coolweatherjetpack.ui.MainActivity
+import com.coolweather.coolweatherjetpack.ui.BaseFragment
+import com.coolweather.coolweatherjetpack.ui.main.MainActivity
 import com.coolweather.coolweatherjetpack.ui.weather.WeatherActivity
 import com.coolweather.coolweatherjetpack.util.InjectorUtil
 import kotlinx.android.synthetic.main.activity_weather.*
 
-class ChooseAreaFragment : Fragment() {
-
+class ChooseAreaFragment : BaseFragment() {
     private lateinit var viewModel: ChooseAreaViewModel
     private var progressDialog: ProgressDialog? = null
     private lateinit var titleText: TextView
@@ -27,16 +27,31 @@ class ChooseAreaFragment : Fragment() {
     private lateinit var listView: ListView
     private lateinit var adapter: ArrayAdapter<String>
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.choose_area, container, false)
+    override fun getLayoutResources(): Int {
+        return R.layout.choose_area
+    }
+
+    override fun initView(view: View) {
         titleText = view.findViewById(R.id.title_text)
         backButton = view.findViewById(R.id.back_button)
         listView = view.findViewById(R.id.list_view)
         viewModel = ViewModelProviders.of(this, InjectorUtil.getChooseAreaModelFactory()).get(ChooseAreaViewModel::class.java)
         adapter = ArrayAdapter(context!!, android.R.layout.simple_list_item_1, viewModel.dataList)
         listView.adapter = adapter
-        return view
     }
+
+
+
+//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+//        val view = inflater.inflate(R.layout.choose_area, container, false)
+//        titleText = view.findViewById(R.id.title_text)
+//        backButton = view.findViewById(R.id.back_button)
+//        listView = view.findViewById(R.id.list_view)
+//        viewModel = ViewModelProviders.of(this, InjectorUtil.getChooseAreaModelFactory()).get(ChooseAreaViewModel::class.java)
+//        adapter = ArrayAdapter(context!!, android.R.layout.simple_list_item_1, viewModel.dataList)
+//        listView.adapter = adapter
+//        return view
+//    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

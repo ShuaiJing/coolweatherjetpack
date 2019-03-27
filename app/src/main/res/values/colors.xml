@@ -3,4 +3,47 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="color_primary">#1E1E1E</color>
+    <color name="color_primary_dark">#1E1E1E</color>
+    <color name="color_accent">#DBC688</color>
+    <color name="color_text_primary">@color/black</color>
+    <color name="color_text_secondary">@color/text_color_ffa3a3a3</color>
+    <color name="color_window_background">#FFF9F9F9</color>
+    <color name="color_divider">#FFEAEAF2</color>
+    <color name="color_edge_effect">#FFF8F8F8</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black_theme">#010101</color>
+    <color name="black_bg">#121212</color>
+    <color name="dark_gray">@color/color_primary</color>
+    <color name="rate_red">#FF3A28</color>
+    <color name="rate_green">#34C85A</color>
+
+    <color name="primary_button_background_normal">#DBC688</color>
+    <color name="primary_button_background_press">#978651</color>
+    <color name="primary_button_background_disable">#E6E4DE</color>
+    <color name="primary_button_text_normal">#000000</color>
+    <color name="primary_button_text_press">#000000</color>
+    <color name="primary_button_text_disable">#9A9996</color>
+
+    <color name="secondary_button_background_normal">#DBC688</color>
+    <color name="secondary_button_background_press">#85743F</color>
+    <color name="secondary_button_background_disable">#666562</color>
+    <color name="secondary_button_text_normal">#DBC688</color>
+    <color name="secondary_button_text_press">#85743F</color>
+    <color name="secondary_button_text_disable">#666562</color>
+
+    <color name="white_button_background_press">#D0D8F3</color>
+    <color name="color_tab_primary">@color/color_accent</color>
+    <color name="color_tab_secondary">#979797</color>
+
+    <color name="text_color_fff9f9f9">#FFF9F9F9</color>
+    <color name="text_color_ffb8b8b8">#FFB8B8B8</color>
+    <color name="text_color_ffa3a3a3">#FFA3A3A3</color>
+    <color name="text_color_ff666666">#FF666666</color>
+    <color name="text_color_ff333333">#FF333333</color>
+    <color name="text_color_ff008eff">#FF008EFF</color>
+    <color name="text_color_ff4B99FF">#FF4B99FF</color>
 </resources>
