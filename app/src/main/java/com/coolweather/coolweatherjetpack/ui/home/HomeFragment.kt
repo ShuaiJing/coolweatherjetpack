@@ -14,8 +14,10 @@ import com.coolweather.coolweatherjetpack.ui.common.CommonAdapter
 import com.coolweather.coolweatherjetpack.ui.common.DividerItemDecoration
 import com.coolweather.coolweatherjetpack.ui.common.DividerItemDecoration.Companion.BOTH_SET
 import com.coolweather.coolweatherjetpack.ui.common.ViewHolder
+import com.coolweather.coolweatherjetpack.ui.goodsDetail.GoodsDetailActivity
 import com.coolweather.coolweatherjetpack.util.GlideImageLoader
 import com.coolweather.coolweatherjetpack.util.InjectorUtil
+import com.coolweather.coolweatherjetpack.util.newIntent
 import kotlinx.android.synthetic.main.content_toolbar.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -48,6 +50,8 @@ class HomeFragment : BaseFragment() {
            }
 
        }
-
+        banner.setOnBannerListener{
+            activity?.newIntent<GoodsDetailActivity>()
+        }
     }
 }

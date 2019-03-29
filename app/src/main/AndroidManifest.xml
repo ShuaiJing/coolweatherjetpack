@@ -18,6 +18,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".ui.goodsDetail.GoodsDetailActivity">
+        </activity>
         <activity
                 android:name=".ui.ScrollingActivity"
                 android:label="@string/title_activity_scrolling"
