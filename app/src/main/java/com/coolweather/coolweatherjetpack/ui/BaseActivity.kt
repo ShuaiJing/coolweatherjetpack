@@ -1,9 +1,12 @@
 package com.coolweather.coolweatherjetpack.ui
 
+import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.coolweather.coolweatherjetpack.ui.common.LoadingDialog
+
 
 open class BaseActivity : AppCompatActivity(){
     private var mLoadingDialog : LoadingDialog?=null
@@ -25,7 +28,7 @@ open class BaseActivity : AppCompatActivity(){
     fun hideLoading() {
         if (mLoadingDialog!!.isShowing) {
 
-            mLoadingDialog?.hide()
+            mLoadingDialog!!.hide()
         }
     }
 }

@@ -8,12 +8,14 @@ import com.coolweather.coolweatherjetpack.util.InjectorUtil
 import com.coolweather.coolweatherjetpack.ui.weather.WeatherActivity
 import android.content.Intent
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import com.coolweather.coolweatherjetpack.adapter.MainPagerAdapter
 import com.coolweather.coolweatherjetpack.ui.BaseActivity
 import com.coolweather.coolweatherjetpack.ui.BaseFragment
 import com.coolweather.coolweatherjetpack.ui.account.AccountFragment
 import com.coolweather.coolweatherjetpack.ui.home.HomeFragment
 import com.coolweather.coolweatherjetpack.ui.shoppingCart.ShoppingCartFragment
+import com.coolweather.coolweatherjetpack.util.ScreenUtil
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -24,6 +26,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        ScreenUtil.setStatusBarColor(this,ContextCompat.getColor(this,R.color.white))
 //        if (KEY.isEmpty()) {
 //            val builder = AlertDialog.Builder(this)
 //            builder.setMessage("请先在MainActivity中配置天气API的Key")

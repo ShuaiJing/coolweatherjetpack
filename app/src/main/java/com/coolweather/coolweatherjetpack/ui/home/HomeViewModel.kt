@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.coolweather.coolweatherjetpack.data.GoodsRepository
 
 class HomeViewModel (private var repository: GoodsRepository) : ViewModel() {
-    fun getIndexGoods() = repository.getIndexGoods()
-    var dataList = ArrayList<String>()
+    fun getBanners() = repository.getBanners()
+    fun getGoods(categoryId: Int) = repository.getGoods(categoryId)
+
 }
