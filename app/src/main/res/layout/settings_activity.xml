@@ -1,0 +1,48 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+     <include layout="@layout/content_toolbar"></include>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:background="@drawable/common_item_selector"
+              android:drawableRight="@drawable/arrow_down"
+              android:gravity="center_vertical"
+              android:text="收货地址管理"
+              android:paddingLeft="20dp"
+              android:id="@+id/address"
+
+    />
+    <View android:layout_width="match_parent" android:layout_height="0.6dp" android:background="@color/text_color_fff9f9f9"></View>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:background="@drawable/common_item_selector"
+              android:drawableRight="@drawable/arrow_down"
+              android:gravity="center_vertical"
+              android:text="钱包地址管理"
+              android:paddingLeft="20dp"
+              android:id="@+id/wallet_address"
+
+    />
+    <View android:layout_width="match_parent" android:layout_height="0.6dp" android:background="@color/text_color_fff9f9f9"></View>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:background="@drawable/common_item_selector"
+              android:drawableRight="@drawable/arrow_down"
+              android:gravity="center_vertical"
+              android:text="关于尼古拉商城"
+              android:paddingLeft="20dp"
+              android:id="@+id/about"
+
+    />
+    <View android:layout_width="match_parent" android:layout_height="0.6dp" android:background="@color/text_color_fff9f9f9"></View>
+
+    <Button android:layout_width="match_parent" android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:textColor="@color/white"
+            android:text="退出登录"
+            android:id="@+id/logout"
+            android:background="@drawable/primary_button_background_selector"
+    />
+</LinearLayout>

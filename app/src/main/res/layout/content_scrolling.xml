@@ -4,15 +4,26 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:showIn="@layout/activity_scrolling"
+        tools:showIn="@layout/activity_goods_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ScrollingActivity">
+        >
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:text="@string/large_text"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:padding="10dp"
+                      android:layout_height="match_parent">
+                <TextView android:layout_width="wrap_content"
+                          android:textColor="@color/rate_red"
+                          android:text="$89"
+                          android:textSize="18sp"
+                          android:id="@+id/price"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:textSize="16sp"
+                          android:textColor="@color/text_color_ff333333"
+                          tools:text= "我这是为了啥啊 "
+                          android:layout_height="wrap_content"/>
+        </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

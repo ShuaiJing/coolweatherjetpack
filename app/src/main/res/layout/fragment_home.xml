@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.coolweather.coolweatherjetpack.ui.common.PagerSwipeRefreshLayout
+<com.dbwwt.mall.ui.common.PagerSwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/swipeRefresh"
@@ -23,6 +23,7 @@
                     android:id="@+id/collapsingToolbarLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    app:toolbarId="@+id/toolbar"
                     app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
 
@@ -46,9 +47,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
-                        app:title="尼古拉商城"
                         app:contentInsetStart="0dp"
-                        app:titleTextColor="@color/black"
+                        app:title="@string/app_name"
                         app:layout_collapseMode="pin">
                     <TextView
                             android:layout_width="match_parent"
@@ -86,4 +86,4 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-</com.coolweather.coolweatherjetpack.ui.common.PagerSwipeRefreshLayout>
+</com.dbwwt.mall.ui.common.PagerSwipeRefreshLayout>

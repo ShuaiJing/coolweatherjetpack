@@ -46,7 +46,7 @@
 
         <fragment
             android:id="@+id/chooseAreaFragment"
-            android:name="com.coolweather.coolweatherjetpack.ui.area.ChooseAreaFragment"
+            android:name="com.dbwwt.mall.ui.area.ChooseAreaFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start" />

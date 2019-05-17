@@ -12,14 +12,14 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
 
-    <com.coolweather.coolweatherjetpack.ui.common.NonSlideViewPager
+    <com.dbwwt.mall.ui.common.NonSlideViewPager
             android:layout_width="match_parent"
             android:id="@+id/viewPager"
             android:layout_above="@+id/bottomNavigation"
             android:clipToPadding="false"
             android:layout_height="match_parent">
 
-    </com.coolweather.coolweatherjetpack.ui.common.NonSlideViewPager>
+    </com.dbwwt.mall.ui.common.NonSlideViewPager>
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"

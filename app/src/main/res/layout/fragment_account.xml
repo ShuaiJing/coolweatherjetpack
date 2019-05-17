@@ -2,38 +2,174 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:fitsSystemWindows="true"
               android:orientation="vertical"
+              android:background="#f9f9f9"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <RelativeLayout
-            android:background="@drawable/account_bg"
+            android:background="@drawable/shape_blue_gradient"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="150dp">
         <ImageView
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:layout_width="80dp"
                 android:src="@mipmap/ic_launcher_round"
                 android:id="@+id/icon"
+                android:layout_marginLeft="20dp"
                 android:layout_height="80dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/icon"
-                android:layout_centerHorizontal="true"
                 android:text="登 录"
+                android:layout_marginTop="60dp"
+                android:layout_toRightOf="@+id/icon"
                 android:translationY="5dp"
                 android:textStyle="bold"
                 android:textSize="18sp"
+                android:padding="10dp"
                 android:translationZ="5dp"
-                android:textColor="@color/text_color_ff666666"
+                android:textColor="@color/white"
                 android:id="@+id/login"
 
         />
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:padding="15dp"
+                   android:src="@drawable/ic_setting"
+                   android:id="@+id/setting"
+                   android:layout_height="wrap_content"/>
     </RelativeLayout>
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <TextView android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:text="我的订单"
+              android:gravity="center_vertical"
+              android:paddingLeft="10dp"
+              android:textSize="16sp"
+              android:textColor="@color/text_color_ff666666"
+              android:background="@drawable/common_item_selector"
+              android:id="@+id/order"
+              android:drawableRight="@drawable/arrow_down"
+    />
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginLeft="10dp"
+          android:background="@color/text_color_fff9f9f9"></View>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="80dp"
+                  android:gravity="center"
+                  android:layout_marginBottom="10dp"
+                  android:background="@color/white"
+                  android:orientation="horizontal">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <TextView android:layout_width="0dp"
+                  android:text="待付款"
+                  android:drawableTop="@drawable/ic_unpay"
+                  android:layout_height="wrap_content"
+                  android:textSize="13sp"
+                  android:gravity="center"
+                  android:id="@+id/unpay"
+                  android:textColor="@color/text_color_ff666666"
+                  android:layout_weight="1"/>
+        <TextView android:layout_width="0dp"
+                  android:text="待发货"
+                  android:drawableTop="@drawable/ic_unsend"
+                  android:layout_height="wrap_content"
+                  android:textSize="13sp"
+                  android:id="@+id/unpost"
+                  android:gravity="center"
+                  android:textColor="@color/text_color_ff666666"
+                  android:layout_weight="1"/>
+        <TextView android:layout_width="0dp"
+                  android:text="已发货"
+                  android:id="@+id/post"
+                  android:drawableTop="@drawable/ic_post"
+                  android:layout_height="wrap_content"
+                  android:textSize="13sp"
+                  android:gravity="center"
+                  android:textColor="@color/text_color_ff666666"
+                  android:layout_weight="1"/>
+        <TextView android:layout_width="0dp"
+                  android:text="退换货"
+                  android:drawableTop="@drawable/ic_goods_return"
+                  android:layout_height="wrap_content"
+                  android:textSize="13sp"
+                  android:id="@+id/after_sale"
+                  android:gravity="center"
+                  android:textColor="@color/text_color_ff666666"
+                  android:layout_weight="1"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent"
+                 android:background="@color/white"
+                 android:layout_height="50dp">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:text="我的积分"
+                  android:gravity="center_vertical"
+                  android:paddingLeft="10dp"
+                  android:textSize="16sp"
+                  android:textColor="@color/text_color_ff666666"
+                  android:background="@drawable/common_item_selector"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:gravity="center"
+                  android:textSize="14sp"
+                  android:layout_gravity="right"
+                  android:paddingRight="20dp"
+                  android:text="134"
+                  android:textColor="@color/text_color_ff333333"
+                  android:layout_height="match_parent"/>
+    </FrameLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="0.6dp"
+          android:background="@color/text_color_fff9f9f9"></View>
+    <FrameLayout android:layout_width="match_parent"
+                 android:background="@color/white"
+                 android:layout_height="50dp">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:text="我的窝窝币"
+                  android:gravity="center_vertical"
+                  android:paddingLeft="10dp"
+                  android:textSize="16sp"
+                  android:textColor="@color/text_color_ff666666"
+                  android:background="@drawable/common_item_selector"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:gravity="center"
+                  android:textSize="14sp"
+                  android:layout_gravity="right"
+                  android:paddingRight="20dp"
+                  android:text="134"
+                  android:textColor="@color/text_color_ff333333"
+                  android:layout_height="match_parent"/>
+    </FrameLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="0.6dp"
+          android:background="@color/text_color_fff9f9f9"></View>
+    <FrameLayout android:layout_width="match_parent"
+                 android:background="@color/white"
+                 android:layout_height="50dp">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:text="我的健康排名"
+                  android:gravity="center_vertical"
+                  android:paddingLeft="10dp"
+                  android:textSize="16sp"
+                  android:textColor="@color/text_color_ff666666"
+                  android:background="@drawable/common_item_selector"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:gravity="center"
+                  android:textSize="14sp"
+                  android:layout_gravity="right"
+                  android:paddingRight="20dp"
+                  android:text="134"
+                  android:textColor="@color/text_color_ff333333"
+                  android:layout_height="match_parent"/>
+    </FrameLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="0.6dp"
+          android:background="@color/text_color_fff9f9f9"></View>
 </LinearLayout>

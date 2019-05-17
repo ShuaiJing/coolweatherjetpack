@@ -21,8 +21,8 @@
     <color name="rate_red">#FF3A28</color>
     <color name="rate_green">#34C85A</color>
 
-    <color name="primary_button_background_normal">#DBC688</color>
-    <color name="primary_button_background_press">#978651</color>
+    <color name="primary_button_background_normal">#FF4B99FF</color>
+    <color name="primary_button_background_press">#FF008EFF</color>
     <color name="primary_button_background_disable">#E6E4DE</color>
     <color name="primary_button_text_normal">#000000</color>
     <color name="primary_button_text_press">#000000</color>
