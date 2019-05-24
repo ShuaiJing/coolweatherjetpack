@@ -21,9 +21,9 @@ class ShoppingCartFragment : BaseFragment() {
         toolbar.navigationIcon = null
         toolbar.title = "购物车"
         viewModel = ViewModelProviders.of(this,InjectorUtil.getShoppingCartFactory()).get(ShoppingCartViewModel::class.java)
-        adapter = object : CommonAdapter<String>(context!!, android.R.layout.simple_list_item_1, viewModel.dataList){
+        adapter = object : CommonAdapter<String>(context!!,R.layout.item_cart ,viewModel.dataList){
             override fun convert(holder: ViewHolder, t: String) {
-                holder.setText(android.R.id.text1, t)
+                holder.setText(android.R.id.title, t)
             }
 
         }
@@ -34,7 +34,7 @@ class ShoppingCartFragment : BaseFragment() {
 
         })
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.addItemDecoration(DividerItemDecoration(context!!, DividerItemDecoration.HORIZONTAL_LIST,5, Color.LTGRAY))
+//        recyclerView.addItemDecoration(DividerItemDecoration(context!!, DividerItemDecoration.HORIZONTAL_LIST,5, Color.LTGRAY))
         recyclerView.adapter = adapter
     }
 
