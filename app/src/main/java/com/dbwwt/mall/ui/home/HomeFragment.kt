@@ -1,9 +1,11 @@
 package com.dbwwt.mall.ui.home
 
+import android.app.Activity
 import android.graphics.Color
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -78,7 +80,7 @@ class HomeFragment : BaseFragment() ,
         viewpager.addOnPageChangeListener(this)
         viewpager.adapter = CommonPagerAdapter(views, titles)
         banner.setOnBannerListener{
-            activity?.newIntent<GoodsDetailActivity>()
+            GoodsDetailActivity.navigation(activity as Activity, banners[it].goodsId)
         }
         tablayout.setupWithViewPager(viewpager)
         loadData()
@@ -113,6 +115,10 @@ class HomeFragment : BaseFragment() ,
                 result ->
             var list = result.data?.banners
             if (list != null) {
+                banners.clear()
+                banners.addAll(list)
+            }
+            if (list != null) {
                 for (a in list) {
                     var temp = ServiceCreator.BASE_URL+"image/" + a.image
                     images.add(temp)
@@ -143,6 +149,17 @@ class HomeFragment : BaseFragment() ,
                 }
 
             }
+            oilAdapter.setOnItemClickListener(object : CommonAdapter.OnItemClickListener {
+                override fun onItemClick(view: View, holder: RecyclerView.ViewHolder, position: Int) {
+                    GoodsDetailActivity.navigation(activity as Activity, list[position].id)
+                }
+
+
+                override fun onItemLongClick(view: View, holder: RecyclerView.ViewHolder, position: Int): Boolean {
+                    return false
+                }
+            })
+
 
             oilRecyclerView.adapter = oilAdapter
         })
@@ -166,7 +183,16 @@ class HomeFragment : BaseFragment() ,
                 }
 
             }
+            saltAdapter.setOnItemClickListener(object : CommonAdapter.OnItemClickListener {
+                override fun onItemClick(view: View, holder: RecyclerView.ViewHolder, position: Int) {
+                    GoodsDetailActivity.navigation(activity as Activity, list[position].id)
+                }
 
+
+                override fun onItemLongClick(view: View, holder: RecyclerView.ViewHolder, position: Int): Boolean {
+                    return false
+                }
+            })
             saltRecyclerView.adapter = saltAdapter
         })
         viewModel.getGoods(8).observe(this, Observer {
@@ -192,7 +218,16 @@ class HomeFragment : BaseFragment() ,
                 }
 
             }
+            suitAdapter.setOnItemClickListener(object : CommonAdapter.OnItemClickListener {
+                override fun onItemClick(view: View, holder: RecyclerView.ViewHolder, position: Int) {
+                    GoodsDetailActivity.navigation(activity as Activity, list[position].id)
+                }
 
+
+                override fun onItemLongClick(view: View, holder: RecyclerView.ViewHolder, position: Int): Boolean {
+                    return false
+                }
+            })
             suitRecyclerView.adapter = suitAdapter
         })
 

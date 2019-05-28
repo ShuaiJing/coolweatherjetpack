@@ -1,5 +1,6 @@
 package com.dbwwt.mall.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import com.dbwwt.mall.R
 import androidx.core.content.ContextCompat
@@ -22,6 +23,10 @@ class MainActivity : BaseActivity() {
     private var mHomeFragment : HomeFragment?=null
     private var mShoppingCartFragment : ShoppingCartFragment?=null
     private var mAccountFragment : AccountFragment?=null
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        initFragment()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        if (KEY.isEmpty()) {

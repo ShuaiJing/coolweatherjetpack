@@ -18,6 +18,7 @@ import retrofit2.Response
 
 class AccountRepository private constructor(var network: CoolWeatherNetwork){
     val  USER_INFO = "user_info"
+    var token = ""
     var userInfo :UserInfo?=getCachedUserInfo()
     var isLogined = false
     companion object {
@@ -40,7 +41,9 @@ class AccountRepository private constructor(var network: CoolWeatherNetwork){
         if (userInfo != null) {
             isLogined = true
             Log.d("userinfo",userInfo)
-            return Gson().fromJson(userInfo, LoginRes::class.java).user_info
+            var response = Gson().fromJson(userInfo, LoginRes::class.java)
+            token = response.user_token
+            return response.user_info
         }
         return null
     }
@@ -101,5 +104,10 @@ class AccountRepository private constructor(var network: CoolWeatherNetwork){
         val editor = edit()
         action(editor)
         editor.apply()
+    }
+
+    fun logout() {
+        PreferenceManager.getDefaultSharedPreferences(CoolWeatherApplication.context).edit().clear().commit()
+        isLogined = false
     }
 }

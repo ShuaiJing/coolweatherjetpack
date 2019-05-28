@@ -68,15 +68,15 @@ class LoginActivity : BaseActivity(),TextWatcher {
         }
         showLoading("登录中")
         viewModel.login(sms_code.text.toString(),token).observe(this, Observer {
+            hideLoading()
             if (it.status == Resource.SUCCESS) {
-                showLoading("登录成功！")
+                showToast("登录成功！")
                 AccountRepository.getInstance(CoolWeatherNetwork.getInstance()).cacheUserInfo(it.data)
                 finish()
 
             } else if (it.status == Resource.ERROR) {
                 showToast("登录失败")
             }
-            hideLoading()
         })
     }
     fun sendCode(v : View?) {
@@ -109,7 +109,7 @@ class LoginActivity : BaseActivity(),TextWatcher {
         }
 
         override fun onTick(millisUntilFinished: Long) {
-            tv.text = "${millisUntilFinished/1000}秒后重新获取验证码"
+            tv.text = "${millisUntilFinished/1000}秒重新获取"
         }
 
     }

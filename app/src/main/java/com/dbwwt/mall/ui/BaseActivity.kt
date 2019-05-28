@@ -19,6 +19,9 @@ import com.dbwwt.mall.util.ScreenUtil
     }
 
     override fun onDestroy() {
+        if (mLoadingDialog!=null) {
+            mLoadingDialog!!.dismiss()
+        }
         super.onDestroy()
     }
 
@@ -26,7 +29,10 @@ import com.dbwwt.mall.util.ScreenUtil
         if (mLoadingDialog == null) {
             mLoadingDialog = LoadingDialog(this)
         }
-        mLoadingDialog?.show()
+        if (!mLoadingDialog!!.isShowing){
+
+            mLoadingDialog?.show()
+        }
     }
 
     fun hideLoading() {

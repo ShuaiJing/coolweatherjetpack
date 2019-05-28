@@ -2,8 +2,11 @@ package com.dbwwt.mall.data.network.api
 
 import com.dbwwt.mall.data.model.sales.BannerRes
 import com.dbwwt.mall.data.model.sales.Goods
+import com.dbwwt.mall.data.model.sales.GoodsDetail
+import com.dbwwt.mall.data.model.sales.ShoppingCartRes
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Path
 
 interface SalesService {
@@ -22,5 +25,10 @@ interface SalesService {
 //
 //    @GET("api/china/{provinceId}/{cityId}")
 //    fun getCounties(@Path("provinceId") provinceId: Int, @Path("cityId") cityId: Int): Call<List<County>>
+    @GET("shoppingcart/get")
+    fun getShoppingCart() : Call<List<ShoppingCartRes>>
+
+    @GET("goods/get/{id}")
+    fun getGoodsDetail(@Path("id")id: Int) : Call<GoodsDetail>
 
 }

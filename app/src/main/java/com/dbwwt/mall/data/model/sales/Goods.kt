@@ -1,5 +1,6 @@
 package com.dbwwt.mall.data.model.sales
 
+
 class Goods {
     var id = 0
     var name = ""

@@ -7,6 +7,8 @@ import com.dbwwt.mall.data.model.place.County
 import com.dbwwt.mall.data.model.place.Province
 import com.dbwwt.mall.data.model.sales.BannerRes
 import com.dbwwt.mall.data.model.sales.Goods
+import com.dbwwt.mall.data.model.sales.GoodsDetail
+import com.dbwwt.mall.data.model.sales.ShoppingCartRes
 import com.dbwwt.mall.data.model.weather.HeWeather
 import com.dbwwt.mall.data.network.api.AccountService
 import com.dbwwt.mall.data.network.api.PlaceService
@@ -24,6 +26,9 @@ class CoolWeatherNetwork {
     private val salesService = ServiceCreator.create(SalesService::class.java)
     fun fetchBanners(callback: Callback<BannerRes>) = salesService.getBanner().enqueue(callback)
     fun fetchGoods(categoryId: Int,callback: Callback<List<Goods>>) = salesService.getGoods(categoryId).enqueue(callback)
+    fun fetchGoodsDetail(id: Int,callback: Callback<GoodsDetail>) = salesService.getGoodsDetail(id).enqueue(callback)
+
+    fun fetchShoppingCart(callback: Callback<List<ShoppingCartRes>>) = salesService.getShoppingCart().enqueue(callback)
     fun fetchProvinceList(callback: Callback<List<Province>>) = placeService.getProvinces().enqueue(callback)
 
     fun fetchCityList(provinceId: Int, callback: Callback<List<City>>) = placeService.getCities(provinceId).enqueue(callback)

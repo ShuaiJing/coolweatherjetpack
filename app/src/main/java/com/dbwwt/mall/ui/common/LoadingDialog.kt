@@ -11,6 +11,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.dbwwt.mall.R
 
+
+
 class LoadingDialog(context: Context) : Dialog(context, R.style.WinDialog) {
 
     private val mTextView: TextView?
@@ -63,4 +65,5 @@ class LoadingDialog(context: Context) : Dialog(context, R.style.WinDialog) {
             false
         } else super.onTouchEvent(event)
     }
+
 }

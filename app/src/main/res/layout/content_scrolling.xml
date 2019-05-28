@@ -21,9 +21,13 @@
                           android:layout_height="wrap_content"/>
                 <TextView android:layout_width="wrap_content"
                           android:textSize="16sp"
+                          android:id="@+id/name"
                           android:textColor="@color/text_color_ff333333"
                           tools:text= "我这是为了啥啊 "
                           android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="match_parent"
+                           android:id="@+id/desImg"
+                           android:layout_height="wrap_content"/>
         </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

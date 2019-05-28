@@ -12,9 +12,11 @@ object ServiceCreator {
     const val BASE_URL = "https://api.dbwwt.com/"
     private val loggingInterceptor: HttpLoggingInterceptor =
         HttpLoggingInterceptor()
+    private val loginInterceptor = LoginInterceptor()
     //显示日志级别
     val level: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.BODY
     val httpClient = OkHttpClient.Builder().addInterceptor(loggingInterceptor.setLevel(level))
+        .addInterceptor(loginInterceptor)
         .connectTimeout(60, TimeUnit.SECONDS)
         .readTimeout(10, TimeUnit.SECONDS)
 
