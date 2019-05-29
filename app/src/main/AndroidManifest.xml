@@ -18,6 +18,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".ui.address.AddAddressActivity">
+        </activity>
+        <activity android:name=".ui.address.AddressActivity">
+        </activity>
         <activity
                 android:name=".ui.account.SettingsActivity"
                 android:label="@string/title_activity_settings">
@@ -37,6 +41,9 @@
         </activity>
         <activity
                 android:name=".ui.SplashActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
                 android:theme="@style/AppTheme.FullScreen.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -46,8 +53,7 @@
         </activity>
         <activity
                 android:name=".ui.main.MainActivity"
-                android:launchMode="singleInstance"
-        >
+                android:launchMode="singleTask">
         </activity>
         <activity android:name=".ui.weather.WeatherActivity"/>
     </application>

@@ -39,10 +39,12 @@ class AccountRepository private constructor(var network: CoolWeatherNetwork){
     fun getCachedUserInfo(): UserInfo? {
         val userInfo = PreferenceManager.getDefaultSharedPreferences(CoolWeatherApplication.context).getString(USER_INFO, null)
         if (userInfo != null) {
-            isLogined = true
+
             Log.d("userinfo",userInfo)
             var response = Gson().fromJson(userInfo, LoginRes::class.java)
             token = response.user_token
+            if (!token.isNullOrEmpty()) isLogined = true
+
             return response.user_info
         }
         return null

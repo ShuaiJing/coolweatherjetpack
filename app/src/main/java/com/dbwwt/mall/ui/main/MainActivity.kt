@@ -26,6 +26,8 @@ class MainActivity : BaseActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         initFragment()
+        showTab(ID_HOME)
+        bottomNavigation.show(ID_HOME, true)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -5,9 +5,7 @@ import com.dbwwt.mall.data.model.sales.Goods
 import com.dbwwt.mall.data.model.sales.GoodsDetail
 import com.dbwwt.mall.data.model.sales.ShoppingCartRes
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface SalesService {
 
@@ -25,6 +23,7 @@ interface SalesService {
 //
 //    @GET("api/china/{provinceId}/{cityId}")
 //    fun getCounties(@Path("provinceId") provinceId: Int, @Path("cityId") cityId: Int): Call<List<County>>
+//    @Headers("accept: */*")
     @GET("shoppingcart/get")
     fun getShoppingCart() : Call<List<ShoppingCartRes>>
 

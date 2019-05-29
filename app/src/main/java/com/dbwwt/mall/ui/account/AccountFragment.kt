@@ -42,6 +42,7 @@ class AccountFragment : BaseFragment() {
         viewModel = ViewModelProviders.of(this, InjectorUtil.getAccountModelFactory()).get(AccountViewModel::class.java)
         if (AccountRepository.getInstance(CoolWeatherNetwork.getInstance()).isLogined){
             login.isClickable = false
+            if (InjectorUtil.getAccountRepository().userInfo != null)
             login.text = InjectorUtil.getAccountRepository().userInfo!!.mobile
         }
         order.setOnClickListener { OrderActivity.navigation(activity!!,0) }

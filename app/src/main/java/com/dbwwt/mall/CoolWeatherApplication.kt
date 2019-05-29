@@ -6,6 +6,7 @@ import android.content.Context
 import cat.ereza.customactivityoncrash.activity.DefaultErrorActivity
 import cat.ereza.customactivityoncrash.config.CaocConfig
 import com.dbwwt.mall.ui.SplashActivity
+import com.facebook.stetho.Stetho
 import org.litepal.LitePal
 
 class CoolWeatherApplication : Application() {
@@ -30,6 +31,7 @@ class CoolWeatherApplication : Application() {
             .restartActivity(SplashActivity::class.java)      //重新启动后的页面
             .errorActivity(DefaultErrorActivity::class.java) //程序崩溃后显示的页面
             .apply()
+        Stetho.initializeWithDefaults(this)
     }
 
     companion object {

@@ -1,5 +1,6 @@
 package com.dbwwt.mall.data.network
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -17,6 +18,7 @@ object ServiceCreator {
     val level: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.BODY
     val httpClient = OkHttpClient.Builder().addInterceptor(loggingInterceptor.setLevel(level))
         .addInterceptor(loginInterceptor)
+        .addNetworkInterceptor(StethoInterceptor())
         .connectTimeout(60, TimeUnit.SECONDS)
         .readTimeout(10, TimeUnit.SECONDS)
 

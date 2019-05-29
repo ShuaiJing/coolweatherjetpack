@@ -21,6 +21,7 @@ import com.dbwwt.mall.util.ScreenUtil
     override fun onDestroy() {
         if (mLoadingDialog!=null) {
             mLoadingDialog!!.dismiss()
+            mLoadingDialog = null
         }
         super.onDestroy()
     }

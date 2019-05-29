@@ -15,8 +15,10 @@ import com.dbwwt.mall.data.AccountRepository
 import com.dbwwt.mall.data.Resource
 import com.dbwwt.mall.data.network.CoolWeatherNetwork
 import com.dbwwt.mall.ui.BaseActivity
+import com.dbwwt.mall.ui.main.MainActivity
 import com.dbwwt.mall.util.InjectorUtil
 import com.dbwwt.mall.util.ScreenUtil
+import com.dbwwt.mall.util.newIntent
 import com.dbwwt.mall.util.showToast
 
 import kotlinx.android.synthetic.main.activity_login.*
@@ -72,6 +74,7 @@ class LoginActivity : BaseActivity(),TextWatcher {
             if (it.status == Resource.SUCCESS) {
                 showToast("登录成功！")
                 AccountRepository.getInstance(CoolWeatherNetwork.getInstance()).cacheUserInfo(it.data)
+                newIntent<MainActivity>()
                 finish()
 
             } else if (it.status == Resource.ERROR) {
