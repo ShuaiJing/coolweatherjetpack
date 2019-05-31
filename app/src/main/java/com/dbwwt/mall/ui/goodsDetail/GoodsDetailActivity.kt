@@ -9,11 +9,15 @@ import com.bumptech.glide.Glide
 import com.dbwwt.mall.R
 import com.dbwwt.mall.data.Resource
 import com.dbwwt.mall.ui.BaseActivity
+import com.dbwwt.mall.ui.order.OrderDetailActivity
 import com.dbwwt.mall.util.GlideImageLoader
 import com.dbwwt.mall.util.InjectorUtil
+import com.dbwwt.mall.util.newIntent
+import kotlinx.android.synthetic.main.activity_goods_detail.*
 import kotlinx.android.synthetic.main.activity_scrolling.toolbar
 import kotlinx.android.synthetic.main.content_scrolling.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.banner
 
 class GoodsDetailActivity : BaseActivity() {
     private lateinit var viewModel: GoodsDetailViewModel
@@ -27,6 +31,7 @@ class GoodsDetailActivity : BaseActivity() {
         toolbar.setNavigationOnClickListener { finish() }
         loadData()
 //        swipeRefresh.setOnClickListener { loadData() }
+        buy.setOnClickListener { newIntent<OrderDetailActivity>() }
     }
 
     fun loadData() {

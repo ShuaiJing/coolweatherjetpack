@@ -18,6 +18,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".ui.order.OrderDetailActivity">
+        </activity>
         <activity android:name=".ui.address.AddAddressActivity">
         </activity>
         <activity android:name=".ui.address.AddressActivity">
